@@ -29,7 +29,7 @@ def home():
         c.xlsx(input_file_path, output_file_path)
         
         return 'File has been uploaded and converted to Excel. Please check your local directory'
-    return render_template('index.html', form=form)
+    return render_template('index.html', form=form) 
 
 if __name__ == '__main__':
     app.run(debug=True)
