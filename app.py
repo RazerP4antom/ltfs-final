@@ -24,7 +24,7 @@ def home():
         filename = secure_filename(file.filename)
         file.save(os.path.join(os.path.abspath(os.path.dirname(__file__)),app.config['UPLOAD_FOLDER'],secure_filename(file.filename))) # Then save the file
         input_file_path = os.path.join(os.path.abspath(os.path.dirname(__file__)),app.config['UPLOAD_FOLDER'], filename)
-        output_file_path = os.path.join(os.path.abspath(os.path.dirname(__file__)),app.config['UPLOAD_FOLDER'], f'{filename}.xlsx')
+        output_file_path = os.path.join(os.path.abspath(os.path.dirname(__file__)),app.config['UPLOAD_FOLDER'], f'output.xlsx')
         c = pdftables_api.Client('rvaootxkiksu')
         c.xlsx(input_file_path, output_file_path)
         
